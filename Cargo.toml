@@ -1,0 +1,15 @@
+[package]
+name = "bench-compress"
+version = "0.1.0"
+edition = "2024"
+
+[profile.release]
+opt-level = 2
+panic = "abort"
+strip = true
+lto = true
+codegen-units = 1
+
+[dependencies]
+clap = { version = "4.5.23", features = ["derive"] }
+dur = "0.5.3"
